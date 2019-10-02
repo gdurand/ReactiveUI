@@ -1,19 +1,27 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
   <PropertyGroup>
+		<!--
     <TargetFrameworks>netstandard2.0;Xamarin.iOS10;Xamarin.Mac20;Xamarin.TVOS10;MonoAndroid90;netcoreapp2.0;tizen40</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TargetFrameworks);net461;uap10.0.16299;netcoreapp3.0</TargetFrameworks>
+		-->
+		<TargetFrameworks>net461</TargetFrameworks>
     <AssemblyName>ReactiveUI</AssemblyName>
     <RootNamespace>ReactiveUI</RootNamespace>
     <Description>A MVVM framework that integrates with the Reactive Extensions for .NET to create elegant, testable User Interfaces that run on any mobile or desktop platform. Supports Xamarin.iOS, Xamarin.Android, Xamarin.Mac, Xamarin Forms, WPF, Windows Forms, Windows Phone 8.1, Windows Store and Universal Windows Platform (UWP).</Description>
-    <PackageId>ReactiveUI</PackageId>
+    <PackageId>ReactiveUI.StrongNamed</PackageId>
     <LangVersion>latest</LangVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>10.3.6</Version>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>sirlan.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Platforms\**\*.cs" />
     <None Include="Platforms\**\*.cs" />
-    <PackageReference Include="Splat" Version="9.*" />
-    <PackageReference Include="DynamicData" Version="6.*" />
+    <PackageReference Include="DynamicData.StrongNamed" Version="6.13.9" />
+    <PackageReference Include="Splat.Drawing.StrongNamed" Version="9.0.5" />
+    <PackageReference Include="Splat.StrongNamed" Version="9.0.5" />
     <PackageReference Include="System.Reactive" Version="4.1.6" />
   </ItemGroup>
 
@@ -28,7 +36,6 @@
   <ItemGroup Condition=" $(TargetFramework.StartsWith('net4')) ">
     <Compile Include="Platforms\net4\**\*.cs" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
-    <PackageReference Include="Splat.Drawing" Version="9.*" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard2')) ">

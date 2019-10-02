@@ -1,12 +1,19 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
   <PropertyGroup>
+		<!--
     <TargetFrameworks>netcoreapp3.0;net461</TargetFrameworks>
+		-->
+		<TargetFrameworks>net461</TargetFrameworks>
     <RootNamespace>ReactiveUI.Events</RootNamespace>
     <Description>Provides Observable-based events API for WPF UI controls/eventhandlers. The contents of this package is automatically generated, please target pull-requests to the code generator.</Description>
-    <PackageId>ReactiveUI.Events.WPF</PackageId>
+    <PackageId>ReactiveUI.Events.WPF.StrongNamed</PackageId>
     <UseWpf>true</UseWpf>
     <UseWindowsForms>true</UseWindowsForms>
     <NoWarn>$(NoWarn);CS1570;CA1812</NoWarn>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>10.3.6</Version>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>sirlan.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>  
 
   <ItemGroup>

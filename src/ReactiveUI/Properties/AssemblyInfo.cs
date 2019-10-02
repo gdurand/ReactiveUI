@@ -5,11 +5,5 @@
 
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("ReactiveUI.Tests")]
-[assembly: InternalsVisibleTo("ReactiveUI.Blazor")]
-[assembly: InternalsVisibleTo("ReactiveUI.Winforms")]
-[assembly: InternalsVisibleTo("ReactiveUI.Wpf")]
-[assembly: InternalsVisibleTo("ReactiveUI.XamForms")]
-[assembly: InternalsVisibleTo("ReactiveUI.AndroidSupport")]
-[assembly: InternalsVisibleTo("ReactiveUI.AndroidX")]
-[assembly: InternalsVisibleTo("ReactiveUI.Uno")]
+[assembly: InternalsVisibleTo("ReactiveUI.Tests, PublicKey=0024000004800000940000000602000000240000525341310004000001000100a504dfc91ace03a005b813ec9ea8b0afe5f46383f70384ff9b2c60215b32d68a4bf3e05bb337c5f64c9a5001f2029bc764fbf5f6d092dba26e3b9d38c087910840303d41206503c3c986fbcb7227da62b88045388ad9f4bcdae373a424d23634b40ca1cece9d32c1f54a25c64951479f3dcbb0854948182de248546ecf1be1aa")]
+[assembly: InternalsVisibleTo("ReactiveUI.Wpf, PublicKey=0024000004800000940000000602000000240000525341310004000001000100a504dfc91ace03a005b813ec9ea8b0afe5f46383f70384ff9b2c60215b32d68a4bf3e05bb337c5f64c9a5001f2029bc764fbf5f6d092dba26e3b9d38c087910840303d41206503c3c986fbcb7227da62b88045388ad9f4bcdae373a424d23634b40ca1cece9d32c1f54a25c64951479f3dcbb0854948182de248546ecf1be1aa")]
